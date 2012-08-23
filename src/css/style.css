@@ -1,0 +1,63 @@
+/* 
+    Document   : style
+    Created on : Jul 20, 2010, 2:45:33 AM
+    Author     : Shahrukh
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/* 
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+
+root { 
+    display: block;
+}
+
+body { font-family: helvetica; font-size: 12px;  margin:0px; padding:0px;}
+
+a { color: green;}
+a:visited {color:green;}
+a:hover {color:yellow;}
+
+#header {
+    background: url('../images/header.png') no-repeat transparent;
+    width:971px;
+    height: 190px;
+  
+}
+
+#container {
+    width:971;
+    margin-left:auto;
+    margin-right: auto;
+    background-color: #ffffff;
+}
+
+#menu {
+    float:right;
+    padding-top: 179px;
+    font-size: 16px;
+}
+
+#menu ul{text-align:center;list-style:none; margin-top: 0px;}
+#menu ul li{display:inline;padding: 4px;}
+
+#content { margin-top:5px;}
+
+.left {
+    float:left;
+    width:591px;
+}
+
+
+.right{
+ 
+}
+#footer {
+    margin-top: 5px;
+    text-align: right;
+}
+
+#content h1{font-family: arial; font-weight:normal;}
