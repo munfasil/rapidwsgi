@@ -1,5 +1,6 @@
-import sys
 path='C:/wamp/www/abydeen/rapidwsgi/src/'
+
+import sys
 sys.path.append(path)
 import threading
 import setting

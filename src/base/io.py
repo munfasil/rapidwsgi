@@ -29,8 +29,7 @@ class Dispatcher:
             __import__(obj.__name__+"."+next)
             next_obj = getattr(obj, next)
             #raise TypeError(obj.__name__+"."+next)
-        else:
-            next_obj = getattr(obj, next)
+        
             #raise TypeError(obj.__name__+"."+next)
         
         if type(next_obj)=='classobj':
@@ -64,13 +63,6 @@ class Dispatcher:
         except ValueError:
             return callback, ''
         return callback[:dot], callback[dot+1:]    
-
-class Controller:
-    
-    def __init__(self,req,res):
-        self.request=req
-        self.response=res
-    
 
 class Request:
 
@@ -114,8 +106,8 @@ class Response:
         self.content_type=content_type
 
     def push(self):
-         response_headers = [('Content-type', self.content_type),('Content-Length', str(len(self.content)))]
-         self.start_response(self.status,response_headers)
-         return [self.content]
+        response_headers = [('Content-type', self.content_type),('Content-Length', str(len(self.content)))]
+        self.start_response(self.status,response_headers)
+        return [self.content]
 
 
