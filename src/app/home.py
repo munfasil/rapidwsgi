@@ -12,7 +12,7 @@ def test(request, response):
     response.set_content_type("text/html")
 
 def form(request, response):
-    mytemplate = Template(filename=setting.view_dir+"home.html")
+    mytemplate = Template(filename=setting.template_dir+"home.html")
     output = mytemplate.render(data="1")
     c=str(request.form())
     response.set_content(c)
