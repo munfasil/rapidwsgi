@@ -15,17 +15,24 @@ root {
     display: block;
 }
 
-body { font-family: helvetica; font-size: 12px;  margin:0px; padding:0px;}
+body { font-family: sans-serif; font-size: 12px;  margin:0px; padding:0px;}
 
 a { color: green;}
 a:visited {color:green;}
 a:hover {color:yellow;}
 
 #header {
-    background: url('../images/header.png') no-repeat transparent;
+    
     width:971px;
-    height: 190px;
+    height: 100px;
   
+}
+.logo{
+	background: url('../images/logo.png') no-repeat transparent;
+	width:150px;
+    height: 75px;
+    display:inline-block;;
+	
 }
 
 #container {
@@ -35,16 +42,15 @@ a:hover {color:yellow;}
     background-color: #ffffff;
 }
 
-#menu {
+ul.menu {
+    font-size: 14px;
     float:right;
-    padding-top: 179px;
-    font-size: 16px;
 }
 
-#menu ul{text-align:center;list-style:none; margin-top: 0px;}
-#menu ul li{display:inline;padding: 4px;}
+ul.menu{list-style:none; margin-top: 0px;}
+ul.menu li{display:inline;padding:4px;}
 
-#content { margin-top:5px;}
+#content { margin-top:5px; }
 
 .left {
     float:left;
@@ -53,8 +59,14 @@ a:hover {color:yellow;}
 
 
 .right{
- 
+ float:right;
 }
+
+.clear{
+	
+	clear:both;
+}
+
 #footer {
     margin-top: 5px;
     text-align: right;
