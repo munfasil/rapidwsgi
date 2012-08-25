@@ -1,0 +1,16 @@
+<%include file="/element/header.html"/>
+<div id="content">
+	<div class="left">
+		<h1>HTTP VARS</h1>
+		<p>
+		% for a in data:
+			<strong>${a} </strong>: ${data[a]}<br/>
+		% endfor
+		</p>
+	</div>
+	<div class="right">
+	
+	</div>
+	<div class="clear"></div>
+</div>
+<%include file="/element/footer.html"/>
