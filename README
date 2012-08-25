@@ -35,7 +35,7 @@ Features
 Installation procedure:
 -----------------------
 
-Configure WSGI for apache
+1)Configure WSGI for apache
 
 Download mod_wsgi from http://code.google.com/p/modwsgi/wiki/DownloadTheSoftware?tm=2		
 
@@ -45,7 +45,7 @@ LoadModule wsgi_module modules/mod_wsgi.so
 
 rapidWSGI apache configuration
 
-Please set the path according to your public html paths.
+2)Please set the path according to your public html paths.
 
 #Points to the start script
 WSGIScriptAlias /rapidwsgi C:/wamp/www/rapidwsgi/src/index.wsgi
@@ -57,3 +57,13 @@ Allow from all
 
 #Set the alias for static contents
 Alias /static C:/wamp/www/rapidwsgi/src/static/
+
+3)rapidWSGI config
+
+File:src/index.wsgi
+#includes the path of rapidWSGI to sys	
+path='C:/wamp/www/rapidwsgi/src/'
+
+File:src/setting.py
+#set the template directory path
+template_dir="C:/wamp/www/rapidwsgi/src/template/"

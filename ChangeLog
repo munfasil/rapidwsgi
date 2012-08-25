@@ -1,0 +1,5 @@
+v0.1.0 : (20101219)
+ * Creation of rapidWSGI
+ v0.2.0 : (20120826)
+ * Minor updates to rapidWSGI
+ * Auto import of controller files
