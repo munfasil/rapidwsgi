@@ -2,11 +2,11 @@
 from sys import exc_info
 from traceback import format_tb
 from mako.template import Template
+from mako.lookup import TemplateLookup
 import setting
 
 class ExceptionMiddleware(object):
-    """The middleware we use."""
-
+   
     def __init__(self, app):
         self.app = app
 
@@ -29,11 +29,11 @@ class ExceptionMiddleware(object):
                                ('Content-Type', 'text/html')])
             except:
                 pass
-            mytemplate = Template(filename=setting.template_dir+"error.html")
+            mylookup = TemplateLookup(directories=[setting.template_dir])
+            mytemplate = Template(filename=setting.template_dir+"error.html",lookup=mylookup)
             output = mytemplate.render(data=traceback,trace=setting.enable_trace)
             return output.encode("utf8")
 
-        # wsgi applications might have a close function. If it exists
-        # it *must* be called.
+        #close request
         if hasattr(application, 'close'):
             application.close()
