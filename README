@@ -1,0 +1,59 @@
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ *                              rapidwsgi                                      *
+ * Copyright (C) 2010,2011  CodenDev							               *
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ *  This program is free software; you can redistribute it and/or              *
+ *  modify it under the terms of the GNU General Public License                *
+ *  as published by the Free Software Foundation; either version 3             *
+ *  of the License, or (at your option) any later version.                     *
+ *                                                                             *
+ *  This program is distributed in the hope that it will be useful,            *
+ *  but WITHOUT ANY WARRANTY; without even the implied warranty of             *
+ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the              *
+ *  GNU General Public License for more details.                               *
+ *                                                                             *
+ *  You should have received a copy of the GNU General Public License          *
+ *  along with this program; if not, write to the Free Software                *
+ *  Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.*
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+Description
+----------
+
+Project		: rapidWSGI - A minimal addon for WSGI Framework
+License		: GPLv3
+Home Page	: http://www.codendev.com
+
+
+
+Features
+----------
+
+	*Supports Model View Controller.
+	*Mako template libary included.
+	
+Installation procedure:
+-----------------------
+
+Configure WSGI for apache
+
+Download mod_wsgi from http://code.google.com/p/modwsgi/wiki/DownloadTheSoftware?tm=2		
+
+In httpd.conf add this line to load this module
+
+LoadModule wsgi_module modules/mod_wsgi.so
+
+rapidWSGI apache configuration
+
+Please set the path according to your public html paths.
+
+#Points to the start script
+WSGIScriptAlias /rapidwsgi C:/wamp/www/rapidwsgi/src/index.wsgi
+
+<Directory C:/wamp/www/rapidwsgi/src>
+Order allow,deny
+Allow from all
+</Directory>
+
+#Set the alias for static contents
+Alias /static C:/wamp/www/rapidwsgi/src/static/
