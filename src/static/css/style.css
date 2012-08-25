@@ -23,7 +23,7 @@ a:hover {color:yellow;}
 
 #header {
     
-    width:971px;
+   
     height: 100px;
   
 }
@@ -36,7 +36,7 @@ a:hover {color:yellow;}
 }
 
 #container {
-    width:971;
+    width:971px;
     margin-left:auto;
     margin-right: auto;
     background-color: #ffffff;
