@@ -32,7 +32,7 @@ Allow from all
 #Set the alias for static contents
 Alias /static C:/wamp/www/rapidwsgi/src/static/
 ```
-3)rapidWSGI config
+3. rapidWSGI config
 
 File:src/index.wsgi
 ```
